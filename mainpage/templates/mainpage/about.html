@@ -1,4 +1,12 @@
 {% extends 'mainpage/base.html' %}
 {% block description %}
-<p3>Это страница о нас</p3>
+    <body ng-app="Contrib" ng-controller="ContribController">
+    <p3>Это страница о нас</p3>
+
+    <form>
+        <input type="text">
+        <input type="submit" value="Submit">
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    </body>
 {% endblock %}

@@ -15,11 +15,11 @@ class ContribView(APIView):
             #print("pk not none")
             contributors = get_object_or_404(Contributors.objects.all(), pk=pk)
             serizalizer=ContributorSerializer(contributors)
-            return Response({"contributors":serizalizer.data})
+            return Response({"contributors": serizalizer.data})
         else:
             #print("pk is none")
             contributors = Contributors.objects.all()
-            serializer=ContributorSerializer(contributors,many=True)
+            serializer=ContributorSerializer(contributors, many=True)
             return Response({"contributors": serializer.data})
 
 
@@ -32,11 +32,11 @@ class ContribView(APIView):
 
 
     def put(self, request, pk):
-        saved_contributor = get_object_or_404(Contributors.objects.all(),pk=pk)
+        saved_contributor = get_object_or_404(Contributors.objects.all(), pk=pk)
         data = request.data.get('contributors')
         serializer=ContributorSerializer(instance=saved_contributor,data=data,partial=True)
 
-        if serializer.is_valid(raise_exception=True):
+        if serializer.is_valid(raise_exception=True): # узкое место. добавить else с ответом 400
             saved_contributor=serializer.save()
         return Response({"success":"Contributor '{}' updated successfully".format(saved_contributor.title)})
 

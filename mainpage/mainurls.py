@@ -9,9 +9,10 @@ app_name="about"
 urlpatterns = [
     path('', views.face),#главная страница
     #path('about/',views.about), #Про нас
+    #path('about/', ContribView.as_view(template_name="mainpage/about.html")),
     path('about/', ContribView.as_view()),
-    path("about/<int:pk>",ContribView.as_view()),
+    #path("about/<int:pk>",ContribView.as_view()),
     path('net/',views.net), #табличка
-    path('contacts',views.contacts), #Контакты
-    path('site_info',views.site_info)#инфо о сайте
+    path('contacts/',views.contacts), #Контакты
+    path('site_info/',views.site_info)#инфо о сайте
 ]
