@@ -1,4 +1,5 @@
 {% extends 'mainpage/base.html' %}
+{% load i18n %}
 {% block description %}
     <body>
         {% if tables %}
@@ -14,9 +15,13 @@
     <h3>Создать новую позицию</h3>
     <form method="post">
         {%  csrf_token %}
-        {{ form.title }}
+        {{ form.equip }}
         {{ form.quantity}}
+        {{ form.approved_by_manager }}
+        {{ form.delivered }}
         <input type="text" placeholder="Введите название" class="form-row"><br>
+        <input type="number" placeholder="0" class="toggle-nav-sidebar"><br>
+        <input type="number" placeholder="0" class="toggle-nav-sidebar"><br>
         <input type="number" placeholder="0" class="toggle-nav-sidebar"><br>
         <button type="submit" class="button">Отправить</button><br>
     </form>

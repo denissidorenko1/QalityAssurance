@@ -1,0 +1,43 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js">
+    </script>
+    <script src="../../static/mainpage.js"></script>
+</head>
+<body>
+    <div ng-controller='MainCtrl'>
+        <button ng-click="GetC()">GET</button>
+        {% verbatim getblock %}
+
+
+
+            <table style="width: auto">
+                <tr>
+                    <th>ФИО</th>
+                    <th>Био</th>
+                    <th>id</th>
+                </tr>
+            <tr ng-repeat="i in val">
+                <td>{{ i.title }}</td>
+                <td>{{ i.bio }}</td>
+                <td>{{ i.contributor_id }}</td>
+            </tr>
+            </table>
+
+        {% endverbatim getblock %}
+
+        {% verbatim postblock %}
+            <br>
+            <label>Title: </label><input type="text" ng-model="title_input"><br>
+            <label>BIO:</label><input type="text" ng-model="bio_input"><br>
+            <label>ID:</label><input type="number" ng-model="contributor_id_input"><br>
+            <button ng-click="Post()">Post</button><br>
+            <button ng-click="DeleteAll()">Delete All</button>
+        {% endverbatim postblock %}
+    </div>
+</body>
+</html>

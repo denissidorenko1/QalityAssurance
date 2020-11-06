@@ -1,0 +1,68 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="eng" ng-app="equip_app">
+<head>
+    <meta charset="UTF-8">
+    <title>Equipment</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js">
+    </script>
+    <script src="../../static/equipment_js_script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    {% csrf_token %}
+    <nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2" href="http://127.0.0.1:8000/" aria-label="Product">
+
+        <img src="https://cs8.pikabu.ru/images/big_size_comm/2016-03_5/1458912097163946994.jpg" width="75" height="75" align="Product" >
+    </a>
+    <a class="py-2 d-none d-md-inline-block" href="site_info">О сайте</a>
+    <a class="py-2 d-none d-md-inline-block" href="net">Список оборудования</a>
+    <a class="py-2 d-none d-md-inline-block" href="jspage">О нас</a>
+    <a class="py-2 d-none d-md-inline-block" href="contacts">Контакты</a>
+
+      {% if  request.user == AnonymousUser %}
+      <a class="py-2 d-none d-md-inline-block" href=http://127.0.0.1:8000/login/>Логин</a>
+      {% else %}
+      <span>Hello, {{ request.user }}</span>
+      <a class="py-2 d-none d-md-inline-block" href=http://127.0.0.1:8000/logout/>ЛогАут</a>
+      {% endif %}
+
+  </div>
+</nav>
+    <div ng-controller='Equipment_controller'>
+        <button ng-click="GetMethod()">Get</button>
+        {% verbatim getblock %}
+
+             <table style="width: auto">
+                <tr>
+                    <th>Оборудование</th>
+                    <th>Количество</th>
+                    <th>Подтверждено руководством</th>
+                    <th>Получено</th>
+                </tr>
+             <tr ng-repeat="i in pos">
+                 <td>{{ i.equip }}</td>
+                 <td>{{ i.quantity }}</td>
+                 <td>{{ i.approved_by_manager }}</td>
+                 <td>{{ i.delivered }}</td>
+             </tr>
+             </table>
+        {% endverbatim getblock %}
+
+    {% verbatim postblock %}
+        <br>
+        <label>Id (required for put/delete with key): </label><input type="number" ng-model="id_input"><br>
+        <label>Оборудование: </label><input type="text" ng-model="equip_input"><br>
+        <label>Количество: </label><input type="number" ng-model="quantity_input"><br>
+        <label>Подтверждено менеджером: </label><input type="checkbox" ng-model="approved_by_manager_input"><br>
+        <label>Доставлено: </label><input type="checkbox" ng-model="delivered_input"><br>
+        <button ng-click="PostMethod()">Post</button><br>
+        <button ng-click="DeleteAll()">DeleteAll</button>
+        <button ng-click="DeleteByPK(id_input)" >DeleteByID</button><br>
+        <button ng-click="PutByPK(id_input)">PutByPK</button><br>
+    {% endverbatim postblock %}
+    </div>
+</body>
+</html>

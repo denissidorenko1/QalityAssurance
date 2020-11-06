@@ -1,9 +1,11 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Главная страница</title>
+    <title>{% trans "Главная страница" %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 </head>
 <body>
 
@@ -13,12 +15,33 @@
 
         <img src="https://cs8.pikabu.ru/images/big_size_comm/2016-03_5/1458912097163946994.jpg" width="75" height="75" align="Product" >
     </a>
-    <a class="py-2 d-none d-md-inline-block" href="site_info">О сайте</a>
-    <a class="py-2 d-none d-md-inline-block" href="net">Список оборудования</a>
-    <a class="py-2 d-none d-md-inline-block" href="about">О нас</a>
-    <a class="py-2 d-none d-md-inline-block" href="contacts">Контакты</a>
+       <a class="py-2 d-none d-md-inline-block" href="http://127.0.0.1:8000/site_info/">{% trans "О сайте" %}</a>
+      <a class="py-2 d-none d-md-inline-block" href=http://127.0.0.1:8000/net/>{% trans "Список оборудования" %}</a>
+      <a class="py-2 d-none d-md-inline-block" href="http://127.0.0.1:8000/jspage/">{% trans "О нас" %}</a>
+      <a class="py-2 d-none d-md-inline-block" href="http://127.0.0.1:8000/contacts/">{% trans "Контакты" %}</a>
+      <a class="py-2 d-none d-md-inline-block" href=http://127.0.0.1:8000/login/>{% trans "Логин" %}</a>
+      <a class="py-2 d-none d-md-inline-block" href=http://127.0.0.1:8000/logout/>{%  trans "ЛогАут" %}</a>
   </div>
 </nav>
 {% block description %} {% endblock %}
+
+{% block footer %}
+    
+{% endblock %}
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: dimgrey;
+  color: lightgrey;
+  text-align: center;
+}
+</style>
+
+<div class="footer">
+  <p>Footer lol</p>
+</div>
 </body>
 </html>
