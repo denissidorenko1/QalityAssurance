@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+from django.utils.translation import ugettext_lazy as _
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -51,12 +52,13 @@ FORM_RENDERER='django.forms.renderers.DjangoTemplates'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
+
 ]
 
 ROOT_URLCONF = 'TRSIS_lab_1.urls'
@@ -116,6 +118,19 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
+
+LANGUAGE_COOKIE_NAME = 'django_language'
+
+LANGUAGES = (
+    ('en-us', _('English')),
+    ('de', _('Deutsch')),
+    ('es', _('Espanol')),
+    ('fr', _('Francais')),
+    ('ru', _('Русский')),
+    ('uk', _('Украиська')),
+)
+
+
 
 TIME_ZONE = 'UTC'
 

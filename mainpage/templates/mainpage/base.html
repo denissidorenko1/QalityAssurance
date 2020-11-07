@@ -41,7 +41,18 @@
 </style>
 
 <div class="footer">
-  <p>Footer lol</p>
+    <form method="post" action="http://127.0.0.1:8000/change_language/">
+    {% csrf_token %}
+    <select name="language">
+        {% get_available_languages as LANGUAGES %}
+        {% for language in LANGUAGES %}
+        <option value="{{ language.0 }}" {% if language.0 == LANGUAGE_CODE %} selected{% endif %}>
+            {{ language.0|language_name_local }} ({{ language.0 }})
+        </option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Change language">
+</form>
 </div>
 </body>
 </html>

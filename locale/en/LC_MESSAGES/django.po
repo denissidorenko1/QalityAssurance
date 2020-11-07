@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-07 01:43+0300\n"
+"POT-Creation-Date: 2020-11-07 02:04+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,31 +20,45 @@ msgstr ""
 
 #: .\mainpage\templates\mainpage\base.html:6
 msgid "Главная страница"
-msgstr ""
+msgstr "Main page"
 
 #: .\mainpage\templates\mainpage\base.html:18
 msgid "О сайте"
-msgstr ""
+msgstr "About site"
 
 #: .\mainpage\templates\mainpage\base.html:19
 msgid "Список оборудования"
-msgstr ""
+msgstr "Equipment list"
 
 #: .\mainpage\templates\mainpage\base.html:20
 msgid "О нас"
-msgstr ""
+msgstr "About us"
 
 #: .\mainpage\templates\mainpage\base.html:21
 msgid "Контакты"
-msgstr ""
+msgstr "Contacts"
 
 #: .\mainpage\templates\mainpage\base.html:22
 msgid "Логин"
-msgstr ""
+msgstr "LogIn"
 
 #: .\mainpage\templates\mainpage\base.html:23
 msgid "ЛогАут"
-msgstr ""
+msgstr "LogOut"
+
+#: .\mainpage\templates\mainpage\face.html:6
+msgid "Лучшая система учета конфигурации сетевого оборудования"
+msgstr "Best configuration management system ever made"
+
+#: .\mainpage\templates\mainpage\face.html:7
+msgid ""
+"Невероятная надежность решений. Начните использование нашей продукции прямо "
+"сейчас."
+msgstr "Astonishing redundancy of products. Start using our app right now"
+
+#: .\mainpage\templates\mainpage\face.html:8
+msgid "Неиспользуемая кнопка"
+msgstr "this button does nothing"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:7
 msgid "Messages"

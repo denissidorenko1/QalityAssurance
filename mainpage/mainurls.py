@@ -2,7 +2,8 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 from .views import ContribView, EquipmentView
-
+from django.conf.urls.i18n import i18n_patterns
+from django.utils.translation import gettext_lazy as _
 
 
 app_name="about"
@@ -22,6 +23,8 @@ urlpatterns = [
     path('equipment_api/', EquipmentView.as_view()), #rest api link
     path('equipment_api/<int:pk>', EquipmentView.as_view()),
     path('admin/', admin.site.urls),
-    #path('accounts/', include('allauth.urls'))
+
+    path('i18n/', include('django.conf.urls.i18n')),
+    path('change_language/', views.change_language, name='change_language'),
 
 ]

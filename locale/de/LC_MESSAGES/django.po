@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-07 01:42+0300\n"
+"POT-Creation-Date: 2020-11-07 01:59+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,6 +45,20 @@ msgstr "Einloggen"
 #: .\mainpage\templates\mainpage\base.html:23
 msgid "ЛогАут"
 msgstr "Abmelden"
+
+#: .\mainpage\templates\mainpage\face.html:6
+msgid "Лучшая система учета конфигурации сетевого оборудования"
+msgstr "Das beste Buchhaltungssystem für die Konfiguration von Netzwerkgeräten"
+
+#: .\mainpage\templates\mainpage\face.html:7
+msgid ""
+"Невероятная надежность решений. Начните использование нашей продукции прямо "
+"сейчас."
+msgstr "Unglaubliche Zuverlässigkeit der Lösung. Verwenden Sie jetzt unsere Produkte."
+
+#: .\mainpage\templates\mainpage\face.html:8
+msgid "Неиспользуемая кнопка"
+msgstr "Nicht verwendete Taste"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:7
 msgid "Messages"
