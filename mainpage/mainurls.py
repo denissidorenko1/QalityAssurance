@@ -2,8 +2,6 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 from .views import ContribView, EquipmentView
-from django.conf.urls.i18n import i18n_patterns
-from django.utils.translation import gettext_lazy as _
 
 
 app_name="about"

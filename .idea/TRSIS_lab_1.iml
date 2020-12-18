@@ -24,6 +24,9 @@
     <orderEntry type="library" name="all" level="application" />
     <orderEntry type="library" name="jquery-3.5.1.slim" level="application" />
   </component>
+  <component name="PackageRequirementsSettings">
+    <option name="versionSpecifier" value="Strong equality (==x.y.z)" />
+  </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">

@@ -10,9 +10,7 @@ from rest_framework.views import APIView
 from .serializers import ContributorSerializer, EquipmentSerializer
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
 from TRSIS_lab_1 import settings
-from django.http import HttpResponse
 from mainpage import traversal
 
 
