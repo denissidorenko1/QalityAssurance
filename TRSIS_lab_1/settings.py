@@ -155,7 +155,7 @@ LOCALE_PATHS = [
 #SITE_ID=1
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = (os.path.join(BASE_DIR, 'mainpage/statlol'))
+STATIC_ROOT = (os.path.join(BASE_DIR, 'mainpage/static'))
 # STATICFILES_DIRS = (
 #    os.path.join(BASE_DIR, 'mainpage/static'),
 #    os.path.join(BASE_DIR, 'mainpage/templates/mainpage'),
