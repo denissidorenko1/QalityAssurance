@@ -1,0 +1,128 @@
+{% extends 'mainpage/base.html' %}
+{% load i18n %}
+{% block description %}
+<p>Расчет пути</p>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div>
+            <input type="checkbox" name="x00" value="1">
+            <input type="checkbox" name="x01" value="1">
+            <input type="checkbox" name="x02" value="1">
+            <input type="checkbox" name="x03" value="1">
+            <input type="checkbox" name="x04" value="1">
+            <input type="checkbox" name="x05" value="1">
+            <input type="checkbox" name="x06" value="1">
+            <input type="checkbox" name="x07" value="1">
+            <input type="checkbox" name="x08" value="1">
+            <input type="checkbox" name="x09" value="1">
+            <br>
+            <input type="checkbox" name="x10" value="1">
+            <input type="checkbox" name="x11" value="1">
+            <input type="checkbox" name="x12" value="1">
+            <input type="checkbox" name="x13" value="1">
+            <input type="checkbox" name="x14" value="1">
+            <input type="checkbox" name="x15" value="1">
+            <input type="checkbox" name="x16" value="1">
+            <input type="checkbox" name="x17" value="1">
+            <input type="checkbox" name="x18" value="1">
+            <input type="checkbox" name="x19" value="1">
+            <br>
+            <input type="checkbox" name="x20" value="1">
+            <input type="checkbox" name="x21" value="1">
+            <input type="checkbox" name="x22" value="1">
+            <input type="checkbox" name="x23" value="1">
+            <input type="checkbox" name="x24" value="1">
+            <input type="checkbox" name="x25" value="1">
+            <input type="checkbox" name="x26" value="1">
+            <input type="checkbox" name="x27" value="1">
+            <input type="checkbox" name="x28" value="1">
+            <input type="checkbox" name="x29" value="1">
+            <br>
+            <input type="checkbox" name="x30" value="1">
+            <input type="checkbox" name="x31" value="1">
+            <input type="checkbox" name="x32" value="1">
+            <input type="checkbox" name="x33" value="1">
+            <input type="checkbox" name="x34" value="1">
+            <input type="checkbox" name="x35" value="1">
+            <input type="checkbox" name="x36" value="1">
+            <input type="checkbox" name="x37" value="1">
+            <input type="checkbox" name="x38" value="1">
+            <input type="checkbox" name="x39" value="1">
+            <br>
+            <input type="checkbox" name="x40" value="1">
+            <input type="checkbox" name="x41" value="1">
+            <input type="checkbox" name="x42" value="1">
+            <input type="checkbox" name="x43" value="1">
+            <input type="checkbox" name="x44" value="1">
+            <input type="checkbox" name="x45" value="1">
+            <input type="checkbox" name="x46" value="1">
+            <input type="checkbox" name="x47" value="1">
+            <input type="checkbox" name="x48" value="1">
+            <input type="checkbox" name="x49" value="1">
+            <br>
+            <input type="checkbox" name="x50" value="1">
+            <input type="checkbox" name="x51" value="1">
+            <input type="checkbox" name="x52" value="1">
+            <input type="checkbox" name="x53" value="1">
+            <input type="checkbox" name="x54" value="1">
+            <input type="checkbox" name="x55" value="1">
+            <input type="checkbox" name="x56" value="1">
+            <input type="checkbox" name="x57" value="1">
+            <input type="checkbox" name="x58" value="1">
+            <input type="checkbox" name="x59" value="1">
+            <br>
+            <input type="checkbox" name="x60" value="1">
+            <input type="checkbox" name="x61" value="1">
+            <input type="checkbox" name="x62" value="1">
+            <input type="checkbox" name="x63" value="1">
+            <input type="checkbox" name="x64" value="1">
+            <input type="checkbox" name="x65" value="1">
+            <input type="checkbox" name="x66" value="1">
+            <input type="checkbox" name="x67" value="1">
+            <input type="checkbox" name="x68" value="1">
+            <input type="checkbox" name="x69" value="1">
+            <br>
+            <input type="checkbox" name="x70" value="1">
+            <input type="checkbox" name="x71" value="1">
+            <input type="checkbox" name="x72" value="1">
+            <input type="checkbox" name="x73" value="1">
+            <input type="checkbox" name="x74" value="1">
+            <input type="checkbox" name="x75" value="1">
+            <input type="checkbox" name="x76" value="1">
+            <input type="checkbox" name="x77" value="1">
+            <input type="checkbox" name="x78" value="1">
+            <input type="checkbox" name="x79" value="1">
+            <br>
+            <input type="checkbox" name="x80" value="1">
+            <input type="checkbox" name="x81" value="1">
+            <input type="checkbox" name="x82" value="1">
+            <input type="checkbox" name="x83" value="1">
+            <input type="checkbox" name="x84" value="1">
+            <input type="checkbox" name="x85" value="1">
+            <input type="checkbox" name="x86" value="1">
+            <input type="checkbox" name="x87" value="1">
+            <input type="checkbox" name="x88" value="1">
+            <input type="checkbox" name="x89" value="1">
+            <br>
+            <input type="checkbox" name="x90" value="1">
+            <input type="checkbox" name="x91" value="1">
+            <input type="checkbox" name="x92" value="1">
+            <input type="checkbox" name="x93" value="1">
+            <input type="checkbox" name="x94" value="1">
+            <input type="checkbox" name="x95" value="1">
+            <input type="checkbox" name="x96" value="1">
+            <input type="checkbox" name="x97" value="1">
+            <input type="checkbox" name="x98" value="1">
+            <input type="checkbox" name="x99" value="1">
+            <br>
+
+            <label>Начальный узел:</label><input type="number" name="a_node" required><br>
+            <label>Конечный узел :</label><input type="number" name="b_node" required><br>
+
+            <label id="pth">Путь: {{ pathlol }}</label>
+            <br>
+            <input type="submit" name="submit" value="send">
+            <button onclick="document.getElementById('pth').value = 'Путь: '">Очистить</button>
+        </div>
+
+{% endblock %}

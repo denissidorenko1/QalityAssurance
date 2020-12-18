@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-07 01:59+0300\n"
+"POT-Creation-Date: 2020-11-07 06:26+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\TRSIS_lab_1\settings.py:125
+msgid "English"
+msgstr ""
+
+#: .\TRSIS_lab_1\settings.py:126
+msgid "Deutsch"
+msgstr ""
+
+#: .\TRSIS_lab_1\settings.py:127
+msgid "Espanol"
+msgstr ""
+
+#: .\TRSIS_lab_1\settings.py:128
+msgid "Francais"
+msgstr ""
+
+#: .\TRSIS_lab_1\settings.py:129
+msgid "Русский"
+msgstr ""
+
+#: .\TRSIS_lab_1\settings.py:130
+msgid "Украиська"
+msgstr ""
 
 #: .\mainpage\templates\mainpage\base.html:6
 msgid "Главная страница"
@@ -46,6 +70,22 @@ msgstr "Einloggen"
 msgid "ЛогАут"
 msgstr "Abmelden"
 
+#: .\mainpage\templates\mainpage\contacts.html:4
+msgid "Разработчик: Сидоренко Денис"
+msgstr "Entwickler: Sidorenko Denis"
+
+#: .\mainpage\templates\mainpage\contacts.html:6
+msgid "Адрес электронной почты:"
+msgstr "E-Mail-Addresse:"
+
+#: .\mainpage\templates\mainpage\contacts.html:8
+msgid "Телефон:"
+msgstr "Telefon:"
+
+#: .\mainpage\templates\mainpage\equipment_page.html:6
+msgid "Комплектующие"
+msgstr "Komponenten"
+
 #: .\mainpage\templates\mainpage\face.html:6
 msgid "Лучшая система учета конфигурации сетевого оборудования"
 msgstr "Das beste Buchhaltungssystem für die Konfiguration von Netzwerkgeräten"
@@ -54,11 +94,38 @@ msgstr "Das beste Buchhaltungssystem für die Konfiguration von Netzwerkgeräten
 msgid ""
 "Невероятная надежность решений. Начните использование нашей продукции прямо "
 "сейчас."
-msgstr "Unglaubliche Zuverlässigkeit der Lösung. Verwenden Sie jetzt unsere Produkte."
+msgstr ""
+"Unglaubliche Zuverlässigkeit der Lösung. Verwenden Sie jetzt unsere Produkte."
 
 #: .\mainpage\templates\mainpage\face.html:8
 msgid "Неиспользуемая кнопка"
 msgstr "Nicht verwendete Taste"
+
+#: .\mainpage\templates\mainpage\login.html:6
+msgid "Авторизироваться"
+msgstr "Einloggen"
+
+#: .\mainpage\templates\mainpage\login.html:120
+msgid "Don't have an account?"
+msgstr "Sie haben noch keinen Account?"
+
+#: .\mainpage\templates\mainpage\login.html:120
+msgid "Sign Up"
+msgstr "Jetzt registrieren"
+
+#: .\mainpage\templates\mainpage\site_info.html:4
+msgid ""
+"Сайт был создан студентом группы 4832 Сидоренко Денисом при поддержке его "
+"кота Кайзера."
+msgstr "Die Seite wurde von einem Schüler der Gruppe 4832 Sidorenko Denis mit Unterstützung seiner Katze Kaiser erstellt."
+
+#: .\mainpage\templates\mainpage\site_info.html:5
+msgid "Все права на интеллектуальную собственность принадлежат коту."
+msgstr "Alle geistigen Eigentumsrechte liegen bei der Katze."
+
+#: .\mainpage\templates\mainpage\site_info.html:6
+msgid "Исходный код можно найти на github/denissidorenko1 (TBD)."
+msgstr "Der Quellcode ist unter github / denissidorenko1 (TBD) zu finden."
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:7
 msgid "Messages"

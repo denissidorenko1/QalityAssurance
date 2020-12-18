@@ -23,8 +23,8 @@ urlpatterns = [
     path('equipment_api/', EquipmentView.as_view()), #rest api link
     path('equipment_api/<int:pk>', EquipmentView.as_view()),
     path('admin/', admin.site.urls),
-
     path('i18n/', include('django.conf.urls.i18n')),
     path('change_language/', views.change_language, name='change_language'),
+    path('routesearcher/', views.routesearcher)
 
 ]

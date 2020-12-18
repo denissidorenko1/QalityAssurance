@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-07 02:04+0300\n"
+"POT-Creation-Date: 2020-11-07 06:27+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,47 +18,113 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
+#: .\TRSIS_lab_1\settings.py:125
+msgid "English"
+msgstr ""
+
+#: .\TRSIS_lab_1\settings.py:126
+msgid "Deutsch"
+msgstr ""
+
+#: .\TRSIS_lab_1\settings.py:127
+msgid "Espanol"
+msgstr ""
+
+#: .\TRSIS_lab_1\settings.py:128
+msgid "Francais"
+msgstr ""
+
+#: .\TRSIS_lab_1\settings.py:129
+msgid "Русский"
+msgstr ""
+
+#: .\TRSIS_lab_1\settings.py:130
+msgid "Украиська"
+msgstr ""
+
 #: .\mainpage\templates\mainpage\base.html:6
 msgid "Главная страница"
-msgstr ""
+msgstr "Головна сторінка"
 
 #: .\mainpage\templates\mainpage\base.html:18
 msgid "О сайте"
-msgstr ""
+msgstr "Про сайт"
 
 #: .\mainpage\templates\mainpage\base.html:19
 msgid "Список оборудования"
-msgstr ""
+msgstr "Список обладнання"
 
 #: .\mainpage\templates\mainpage\base.html:20
 msgid "О нас"
-msgstr ""
+msgstr "Про нас"
 
 #: .\mainpage\templates\mainpage\base.html:21
 msgid "Контакты"
-msgstr ""
+msgstr "Контакти"
 
 #: .\mainpage\templates\mainpage\base.html:22
 msgid "Логин"
-msgstr ""
+msgstr "Логін"
 
 #: .\mainpage\templates\mainpage\base.html:23
 msgid "ЛогАут"
-msgstr ""
+msgstr "вихід"
+
+#: .\mainpage\templates\mainpage\contacts.html:4
+msgid "Разработчик: Сидоренко Денис"
+msgstr "Розробник: Сидоренко Денис"
+
+#: .\mainpage\templates\mainpage\contacts.html:6
+msgid "Адрес электронной почты:"
+msgstr "Адреса електронної пошти:"
+
+#: .\mainpage\templates\mainpage\contacts.html:8
+msgid "Телефон:"
+msgstr "Телефон:"
+
+#: .\mainpage\templates\mainpage\equipment_page.html:6
+msgid "Комплектующие"
+msgstr "комплектуючі"
 
 #: .\mainpage\templates\mainpage\face.html:6
 msgid "Лучшая система учета конфигурации сетевого оборудования"
-msgstr ""
+msgstr "Краща система обліку конфігурації мережевого обладнання"
 
 #: .\mainpage\templates\mainpage\face.html:7
 msgid ""
 "Невероятная надежность решений. Начните использование нашей продукции прямо "
 "сейчас."
-msgstr ""
+msgstr "Неймовірна надійність рішень. Почніть використання нашої продукції прямо зараз."
 
 #: .\mainpage\templates\mainpage\face.html:8
 msgid "Неиспользуемая кнопка"
-msgstr ""
+msgstr "невикористовувана кнопка"
+
+#: .\mainpage\templates\mainpage\login.html:6
+msgid "Авторизироваться"
+msgstr "авторизуватися"
+
+#: .\mainpage\templates\mainpage\login.html:120
+msgid "Don't have an account?"
+msgstr "Не маєте облікового запису?"
+
+#: .\mainpage\templates\mainpage\login.html:120
+msgid "Sign Up"
+msgstr "Зареєструйтесь"
+
+#: .\mainpage\templates\mainpage\site_info.html:4
+msgid ""
+"Сайт был создан студентом группы 4832 Сидоренко Денисом при поддержке его "
+"кота Кайзера."
+msgstr "Сайт був створений студентом групи 4832 Сидоренко Денисом"
+
+#: .\mainpage\templates\mainpage\site_info.html:5
+msgid "Все права на интеллектуальную собственность принадлежат коту."
+msgstr "Всі права на інтелектуальну власність належать коту."
+
+#: .\mainpage\templates\mainpage\site_info.html:6
+msgid "Исходный код можно найти на github/denissidorenko1 (TBD)."
+msgstr "Вихідний код можна знайти на github / denissidorenko1 (TBD)."
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:7
 msgid "Messages"

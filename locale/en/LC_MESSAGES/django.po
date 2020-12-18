@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-07 02:04+0300\n"
+"POT-Creation-Date: 2020-11-07 06:27+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\TRSIS_lab_1\settings.py:125
+msgid "English"
+msgstr ""
+
+#: .\TRSIS_lab_1\settings.py:126
+msgid "Deutsch"
+msgstr ""
+
+#: .\TRSIS_lab_1\settings.py:127
+msgid "Espanol"
+msgstr ""
+
+#: .\TRSIS_lab_1\settings.py:128
+msgid "Francais"
+msgstr ""
+
+#: .\TRSIS_lab_1\settings.py:129
+msgid "Русский"
+msgstr ""
+
+#: .\TRSIS_lab_1\settings.py:130
+msgid "Украиська"
+msgstr ""
 
 #: .\mainpage\templates\mainpage\base.html:6
 msgid "Главная страница"
@@ -46,9 +70,25 @@ msgstr "LogIn"
 msgid "ЛогАут"
 msgstr "LogOut"
 
+#: .\mainpage\templates\mainpage\contacts.html:4
+msgid "Разработчик: Сидоренко Денис"
+msgstr "Developer: Sidorenko Denis"
+
+#: .\mainpage\templates\mainpage\contacts.html:6
+msgid "Адрес электронной почты:"
+msgstr "E-mail address"
+
+#: .\mainpage\templates\mainpage\contacts.html:8
+msgid "Телефон:"
+msgstr "Phone number:"
+
+#: .\mainpage\templates\mainpage\equipment_page.html:6
+msgid "Комплектующие"
+msgstr "Equipment"
+
 #: .\mainpage\templates\mainpage\face.html:6
 msgid "Лучшая система учета конфигурации сетевого оборудования"
-msgstr "Best configuration management system ever made"
+msgstr "The best configuration management system ever made"
 
 #: .\mainpage\templates\mainpage\face.html:7
 msgid ""
@@ -59,6 +99,32 @@ msgstr "Astonishing redundancy of products. Start using our app right now"
 #: .\mainpage\templates\mainpage\face.html:8
 msgid "Неиспользуемая кнопка"
 msgstr "this button does nothing"
+
+#: .\mainpage\templates\mainpage\login.html:6
+msgid "Авторизироваться"
+msgstr "Sign in"
+
+#: .\mainpage\templates\mainpage\login.html:120
+msgid "Don't have an account?"
+msgstr "Don't have an account?"
+
+#: .\mainpage\templates\mainpage\login.html:120
+msgid "Sign Up"
+msgstr "Sign Up"
+
+#: .\mainpage\templates\mainpage\site_info.html:4
+msgid ""
+"Сайт был создан студентом группы 4832 Сидоренко Денисом при поддержке его "
+"кота Кайзера."
+msgstr "This web-app was developed by the student of 4832 class Sidorenko Denis with help of his cat Kaiser"
+
+#: .\mainpage\templates\mainpage\site_info.html:5
+msgid "Все права на интеллектуальную собственность принадлежат коту."
+msgstr "All rights are reserved and belong to cat"
+
+#: .\mainpage\templates\mainpage\site_info.html:6
+msgid "Исходный код можно найти на github/denissidorenko1 (TBD)."
+msgstr "Source code could be found on github/denissidorenko1 (TBD)."
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:7
 msgid "Messages"

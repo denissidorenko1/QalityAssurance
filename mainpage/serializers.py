@@ -3,6 +3,7 @@ from .models import Contributors, Tables
 
 
 class ContributorSerializer(serializers.Serializer):
+    #зачем объявлять?
     title = serializers.CharField(max_length=120)
     bio = serializers.CharField()
     contributor_id = serializers.IntegerField()
