@@ -158,6 +158,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = (os.path.join(BASE_DIR, 'mainpage/static'))
 # STATICFILES_DIRS = (
 #    os.path.join(BASE_DIR, 'mainpage/static'),
-#    os.path.join(BASE_DIR, 'mainpage/templates/mainpage'),
+   # os.path.join(BASE_DIR, 'mainpage/templates/mainpage'),
 # )
-# print(STATICFILES_DIRS)
+print(STATIC_ROOT)
