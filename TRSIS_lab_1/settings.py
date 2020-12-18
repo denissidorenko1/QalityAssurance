@@ -82,7 +82,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django-azure.wsgi.application'
+WSGI_APPLICATION = 'TRSIS_lab_1.wsgi.application'
 
 
 # Database
