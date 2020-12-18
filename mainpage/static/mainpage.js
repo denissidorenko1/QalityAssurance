@@ -42,7 +42,7 @@ app.controller('MainCtrl', function($scope, $http)
         $scope.contributor_id_input=0
         $scope.GetC = function ()
         {
-            getJSON('http://127.0.0.1:8000/about/', function(err, data) {
+            getJSON('https://trsis-labs.azurewebsites.net/about/', function(err, data) {
             if (err !== null)
             {
                  alert('Something went wrong: ' + err);
@@ -57,13 +57,13 @@ app.controller('MainCtrl', function($scope, $http)
 
         $scope.Post=function ()
         {
-            postJson('http://127.0.0.1:8000/about/',$http, $scope.title_input,$scope.bio_input, $scope.contributor_id_input);
+            postJson('https://trsis-labs.azurewebsites.net/about/',$http, $scope.title_input,$scope.bio_input, $scope.contributor_id_input);
             console.log("tried posting")
         }
 
         $scope.DeleteAll=function ()
         {
-            $http.delete('http://127.0.0.1:8000/about/')
+            $http.delete('https://trsis-labs.azurewebsites.net/about/')
         }
     }
 )
