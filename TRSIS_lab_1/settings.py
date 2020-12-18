@@ -26,7 +26,7 @@ SECRET_KEY = 'nggae!tj_mugc#uj-hp-!c1#xh@r$3#z##r90ru3-xuqpt#dac'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -44,6 +44,8 @@ INSTALLED_APPS = [
 
 
 ]
+
+
 
 #FORM_RENDERER = 'djng.forms.renderers.DjangoAngularBootstrap3Templates' #caused error on admin access
 FORM_RENDERER='django.forms.renderers.DjangoTemplates'
@@ -80,7 +82,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'TRSIS_lab_1.wsgi.application'
+WSGI_APPLICATION = 'django-azure.wsgi.application'
 
 
 # Database
