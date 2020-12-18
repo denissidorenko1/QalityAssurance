@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 from .views import ContribView, EquipmentView
-
+from mainpage.static.rest_framework import js as jsfiles
 
 app_name="about"
 
@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
     path('change_language/', views.change_language, name='change_language'),
-    path('routesearcher/', views.routesearcher)
+    path('routesearcher/', views.routesearcher),
+    path('mainjs/', views.mainjslol)
 
 ]
