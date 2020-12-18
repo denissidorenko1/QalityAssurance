@@ -3,11 +3,11 @@ from django.shortcuts import render,redirect
 from django.views.decorators.csrf import csrf_exempt
 
 from .models import *
-from .forms import TaskForm,CreateUserForm
-#from rest_framework.response import Response
-#from rest_framework.generics import get_object_or_404
-#from rest_framework.views import APIView
-#from .serializers import ContributorSerializer, EquipmentSerializer
+from .forms import TaskForm, CreateUserForm
+from rest_framework.response import Response
+from rest_framework.generics import get_object_or_404
+from rest_framework.views import APIView
+from .serializers import ContributorSerializer, EquipmentSerializer
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from TRSIS_lab_1 import settings
@@ -23,99 +23,99 @@ def shit_to_int(N):
                 N[i][j] = 1
     return N
 
-# class EquipmentView(APIView):
-#     def get(self,request, pk=None):
-#         if pk!=None:
-#             print("pk is not none")
-#             equipment = get_object_or_404(Tables.objects.all, pk=pk)
-#             serializer = EquipmentSerializer(equipment)
-#             return Response({"equipment": serializer.data})
-#         else:
-#             print("pk is none")
-#             equipment=Tables.objects.all()
-#             serializer=EquipmentSerializer(equipment, many=True)
-#             return Response({"equipment":serializer.data})
-#
-#     @login_required(login_url='http://127.0.0.1:8000/login/')
-    # def post(self, request):
-    #     if request.user.is_authenticated==False:
-    #         return Response("you shouldnt access that")
-    #     eq=request.data.get("equipment")
-    #     serializer=EquipmentSerializer(data=eq)
-    #     if serializer.is_valid(raise_exception=True):
-    #         equipment_saved=serializer.save()
-    #         return Response({"success: equipment '{}' added successfully".format(equipment_saved.equip)})
-    #
-    # def put(self, request, pk):
-    #     if request.user.is_authenticated==False:
-    #         return Response("you shouldnt")
-    #     saved_equipment = get_object_or_404(Tables.objects.all(), pk=pk)
-    #     data = request.data.get('equipment')
-    #     serializer = EquipmentSerializer(instance=saved_equipment, data=data, partial=True)
-    #
-    #     if serializer.is_valid(raise_exception=True):  # узкое место. добавить else с ответом 400
-    #         saved_equipment = serializer.save()
-    #     return Response({"success": "Contributor '{}' updated successfully".format(saved_equipment.equip)})
-    #
-    # def delete(self, request, pk=None):  # успешно работает
-    #     if request.user.is_authenticated==False:
-    #         return Response("you shouldnt")
-    #     if pk != None:
-    #         print("pk!=None")
-            # equipment = get_object_or_404(Tables.objects.all(), pk=pk)
-        # else:
-        #     print("pk==None")
-            # equipment = Tables.objects.all()
-        # equipment.delete()
-        # return Response({"message": "Equipment with id '{}' successfully deleted.".format(pk)}, status=204)
-#
+class EquipmentView(APIView):
+    def get(self,request, pk=None):
+        if pk!=None:
+            print("pk is not none")
+            equipment = get_object_or_404(Tables.objects.all, pk=pk)
+            serializer = EquipmentSerializer(equipment)
+            return Response({"equipment": serializer.data})
+        else:
+            print("pk is none")
+            equipment=Tables.objects.all()
+            serializer=EquipmentSerializer(equipment, many=True)
+            return Response({"equipment":serializer.data})
 
-# class ContribView(APIView):
-#     def get(self,request, pk=None):
-#         if pk!=None:
-#             print("pk not none")
-#             contributors = get_object_or_404(Contributors.objects.all(), pk=pk)
-#             serizalizer=ContributorSerializer(contributors)
-#             return Response({"contributors": serizalizer.data})
-#         else:
-#             print("pk is none")
-            # contributors = Contributors.objects.all()
-            # serializer=ContributorSerializer(contributors, many=True)
-            # return Response({"contributors": serializer.data})
-    #
-    # def post(self,request):
-    #     contributor=request.data.get("contributors")
-    #     serializer=ContributorSerializer(data=contributor)
-    #     if serializer.is_valid(raise_exception=True):
-    #         contributor_saved=serializer.save()
-    #     return Response({"success": "Contributor '{}' added successfully".format(contributor_saved.title)})
-    #
-    #
-    # def put(self, request, pk):
-    #     saved_contributor = get_object_or_404(Contributors.objects.all(), pk=pk)
-    #     data = request.data.get('contributors')
-    #     serializer=ContributorSerializer(instance=saved_contributor,data=data,partial=True)
-    #
-    #     if serializer.is_valid(raise_exception=True): # узкое место. добавить else с ответом 400
-    #         saved_contributor=serializer.save()
-    #     return Response({"success":"Contributor '{}' updated successfully".format(saved_contributor.title)})
-    #
-    # def delete(self, request, pk=None): # успешно работает
-    #     if pk!=None:
-    #         print("pk!=None")
-            # contributor=get_object_or_404(Contributors.objects.all(), pk=pk)
-        # else:
-        #     print("pk==None")
-            # contributor = Contributors.objects.all()
-        # contributor.delete()
-        # return Response({"message":"Contributor with id '{}' successfully deleted.".format(pk)}, status=204)
-    #
-    #
-    # def head(self,request):
-    #     return Response("200")
+    # @login_required(login_url='http://127.0.0.1:8000/login/')
+    def post(self, request):
+        if request.user.is_authenticated==False:
+            return Response("you shouldnt access that")
+        eq=request.data.get("equipment")
+        serializer=EquipmentSerializer(data=eq)
+        if serializer.is_valid(raise_exception=True):
+            equipment_saved=serializer.save()
+            return Response({"success: equipment '{}' added successfully".format(equipment_saved.equip)})
+
+    def put(self, request, pk):
+        if request.user.is_authenticated==False:
+            return Response("you shouldnt")
+        saved_equipment = get_object_or_404(Tables.objects.all(), pk=pk)
+        data = request.data.get('equipment')
+        serializer = EquipmentSerializer(instance=saved_equipment, data=data, partial=True)
+
+        if serializer.is_valid(raise_exception=True):  # узкое место. добавить else с ответом 400
+            saved_equipment = serializer.save()
+        return Response({"success": "Contributor '{}' updated successfully".format(saved_equipment.equip)})
+
+    def delete(self, request, pk=None):  # успешно работает
+        if request.user.is_authenticated==False:
+            return Response("you shouldnt")
+        if pk != None:
+            print("pk!=None")
+            equipment = get_object_or_404(Tables.objects.all(), pk=pk)
+        else:
+            print("pk==None")
+            equipment = Tables.objects.all()
+        equipment.delete()
+        return Response({"message": "Equipment with id '{}' successfully deleted.".format(pk)}, status=204)
+
 #
-#
-#
+class ContribView(APIView):
+    def get(self,request, pk=None):
+        if pk!=None:
+            print("pk not none")
+            contributors = get_object_or_404(Contributors.objects.all(), pk=pk)
+            serizalizer=ContributorSerializer(contributors)
+            return Response({"contributors": serizalizer.data})
+        else:
+            print("pk is none")
+            contributors = Contributors.objects.all()
+            serializer=ContributorSerializer(contributors, many=True)
+            return Response({"contributors": serializer.data})
+
+    def post(self,request):
+        contributor=request.data.get("contributors")
+        serializer=ContributorSerializer(data=contributor)
+        if serializer.is_valid(raise_exception=True):
+            contributor_saved=serializer.save()
+        return Response({"success": "Contributor '{}' added successfully".format(contributor_saved.title)})
+
+
+    def put(self, request, pk):
+        saved_contributor = get_object_or_404(Contributors.objects.all(), pk=pk)
+        data = request.data.get('contributors')
+        serializer=ContributorSerializer(instance=saved_contributor,data=data,partial=True)
+
+        if serializer.is_valid(raise_exception=True): # узкое место. добавить else с ответом 400
+            saved_contributor=serializer.save()
+        return Response({"success":"Contributor '{}' updated successfully".format(saved_contributor.title)})
+
+    def delete(self, request, pk=None): # успешно работает
+        if pk!=None:
+            print("pk!=None")
+            contributor=get_object_or_404(Contributors.objects.all(), pk=pk)
+        else:
+            print("pk==None")
+            contributor = Contributors.objects.all()
+        contributor.delete()
+        return Response({"message":"Contributor with id '{}' successfully deleted.".format(pk)}, status=204)
+
+
+    def head(self,request):
+        return Response("200")
+
+
+
 
 def registerPage(request):
     if request.user.is_authenticated:
