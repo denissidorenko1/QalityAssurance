@@ -41,7 +41,7 @@
 </style>
 
 <div class="footer">
-    <form method="post" action="http://127.0.0.1:8000/change_language/">
+    <form method="post" action="https://trsis-labs.azurewebsites.net/change_language/">
     {% csrf_token %}
     <select name="language">
         {% get_available_languages as LANGUAGES %}
