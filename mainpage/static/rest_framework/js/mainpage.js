@@ -1,4 +1,5 @@
-var app=angular.module('app',[])
+
+var app=angular.module('app',['ngRoute'])
 
 var postJson=function(link,$http,title,bio,id)
 {
