@@ -14,7 +14,7 @@ from TRSIS_lab_1 import settings
 from mainpage import traversal
 
 mainjs= """
-var app=angular.module('app',[])
+var app=angular.module('app',['ngRoute'])
 
 var postJson=function(link,$http,title,bio,id)
 {
