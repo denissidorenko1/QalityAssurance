@@ -1,4 +1,4 @@
-var equip_app=angular.module('equip_app',[])
+var equip_app=angular.module('equip_app',['ngRoute'])
 
 var postJson=function(link,$http,equip,quantity,approved,delivered)
 {
