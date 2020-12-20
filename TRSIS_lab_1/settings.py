@@ -156,7 +156,8 @@ LOCALE_PATHS = [
 
 STATIC_URL = '/static/'
 #STATIC_ROOT ='/home/site/repository/mainpage/static/'
-STATICFILES_DIRS='/home/site/repository/mainpage/static/'
+STATICFILES_DIRS=('/home/site/repository/mainpage/static/',
+                  '/home/site/wwwroot/mainpage/static/')
 #STATIC_URL = STATIC_ROOT
 #STATIC_ROOT = os.path.join(BASE_DIR, 'mainpage/static')
 #STATIC_ROOT = (os.path.join(BASE_DIR, 'mainpage/static'))
