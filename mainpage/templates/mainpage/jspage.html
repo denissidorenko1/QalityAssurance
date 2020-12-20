@@ -1,12 +1,14 @@
 {% load static %}
 {% load i18n %}
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en" ng-app='app'>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    {% load static %}
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.js"></script>
-    <script type="text/javascript" src="http://127.0.0.1:8000/static/mainpage.js" ></script>
+    <script  src="{% static "mainpage.js" %}"></script>
+    <!--<script type="text/javascript" src="http://127.0.0.1:8000/static/mainpage.js" ></script> -->
 
 </head>
 <body>
