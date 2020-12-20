@@ -42,7 +42,7 @@ app.controller('MainCtrl', function($scope, $http)
         $scope.contributor_id_input=0
         $scope.GetC = function ()
         {
-            getJSON('https://trsis-labs.azurewebsites.net/ru/about/', function(err, data) {
+            getJSON('https://trsis-labs.azurewebsites.net/about/', function(err, data) {
             if (err !== null)
             {
                  alert('Something went wrong: ' + err);
@@ -57,13 +57,13 @@ app.controller('MainCtrl', function($scope, $http)
 
         $scope.Post=function ()
         {
-            postJson('https://trsis-labs.azurewebsites.net/ru/about/',$http, $scope.title_input,$scope.bio_input, $scope.contributor_id_input);
+            postJson('https://trsis-labs.azurewebsites.net/about/',$http, $scope.title_input,$scope.bio_input, $scope.contributor_id_input);
             console.log("tried posting")
         }
 
         $scope.DeleteAll=function ()
         {
-            $http.delete('https://trsis-labs.azurewebsites.net/ru/about/')
+            $http.delete('https://trsis-labs.azurewebsites.net/about/')
         }
     }
 )

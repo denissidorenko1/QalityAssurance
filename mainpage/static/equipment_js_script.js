@@ -1,4 +1,4 @@
-var equip_app=angular.module('equip_app', [])
+var equip_app=angular.module('app', [])
 
 var postJson=function(link,$http,equip,quantity,approved,delivered)
 {
@@ -98,9 +98,9 @@ equip_app.controller('Equipment_controller', function ($scope, $http, )
 
         $scope.DeleteByPK = function (id)
         {
-            //console.log(id)
+            console.log(id)
             var url = 'https://trsis-labs.azurewebsites.net/equipment_api/'+ id.toString()
-            //console.log(url)
+            console.log(url)
             $http.delete(url)
         }
 
