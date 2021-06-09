@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Список сообщений:<br>
+{% if stream %}
+    {% for message in stream %}
+    {{ stream }}
+    {% endfor %}
+    {% else %}
+    <h3>Сообщений нет</h3>
+{% endif %}
+
+</body>
+</html>

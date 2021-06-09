@@ -70,7 +70,7 @@ equip_app.controller('Equipment_controller', function ($scope, $http, )
 
         $scope.GetMethod = function (ll) {
             console.log(ll)
-            getJSON('https://trsis-labs.azurewebsites.net/equipment_api/', function (err,data) {
+            getJSON('http://127.0.0.1:8000/equipment_api/', function (err,data) {
                 if (err!=null)
                 {
                     alert('something went wrong'+ err);
@@ -87,26 +87,26 @@ equip_app.controller('Equipment_controller', function ($scope, $http, )
         $scope.PostMethod = function ()
         {
 
-            postJson('https://trsis-labs.azurewebsites.net/equipment_api/', $http, $scope.equip_input, $scope.quantity_input, $scope.approved_by_manager_input, $scope.delivered_input)
+            postJson('http://127.0.0.1:8000/equipment_api/', $http, $scope.equip_input, $scope.quantity_input, $scope.approved_by_manager_input, $scope.delivered_input)
             console.log('posted (at least i tried)')
         }
 
         $scope.DeleteAll = function()
         {
-            $http.delete('https://trsis-labs.azurewebsites.net/equipment_api/')
+            $http.delete('http://127.0.0.1:8000/equipment_api/')
         }
 
         $scope.DeleteByPK = function (id)
         {
             console.log(id)
-            var url = 'https://trsis-labs.azurewebsites.net/equipment_api/'+ id.toString()
+            var url = 'http://127.0.0.1:8000/equipment_api/'+ id.toString()
             console.log(url)
             $http.delete(url)
         }
 
         $scope.PutByPK = function (id)
         {
-            var url = 'https://trsis-labs.azurewebsites.net/equipment_api/'+ id.toString()
+            var url = 'http://127.0.0.1:8000/equipment_api/'+ id.toString()
             putJson(url, $http, $scope.equip_input, $scope.quantity_input, $scope.approved_by_manager_input, $scope.delivered_input)
         }
 

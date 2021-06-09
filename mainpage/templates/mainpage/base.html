@@ -9,50 +9,53 @@
 </head>
 <body>
 
-    <nav class="site-header sticky-top py-1">
-  <div class="container d-flex flex-column flex-md-row justify-content-between">
-    <a class="py-2" href="https://trsis-labs.azurewebsites.net/" aria-label="Product">
+<nav class="site-header sticky-top py-1">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2" href="https://trsis-labs.azurewebsites.net/" aria-label="Product">
 
-        <img src="https://cs8.pikabu.ru/images/big_size_comm/2016-03_5/1458912097163946994.jpg" width="75" height="75" align="Product" >
-    </a>
-       <a class="py-2 d-none d-md-inline-block" href="https://trsis-labs.azurewebsites.net/site_info/">{% trans "О сайте" %}</a>
-      <a class="py-2 d-none d-md-inline-block" href=https://trsis-labs.azurewebsites.net/net/>{% trans "Список оборудования" %}</a>
-      <a class="py-2 d-none d-md-inline-block" href="https://trsis-labs.azurewebsites.net/jspage/">{% trans "О нас" %}</a>
-      <a class="py-2 d-none d-md-inline-block" href="https://trsis-labs.azurewebsites.net/contacts/">{% trans "Контакты" %}</a>
-      <a class="py-2 d-none d-md-inline-block" href=https://trsis-labs.azurewebsites.net/login/>{% trans "Логин" %}</a>
-      <a class="py-2 d-none d-md-inline-block" href=https://trsis-labs.azurewebsites.net/logout/>{%  trans "ЛогАут" %}</a>
-  </div>
+            <img src="https://cs8.pikabu.ru/images/big_size_comm/2016-03_5/1458912097163946994.jpg" width="75"
+                 height="75" align="Product">
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="http://127.0.0.1:8000/site_info/">{% trans "О сайте" %}</a>
+        <a class="py-2 d-none d-md-inline-block" href=http://127.0.0.1:8000/net/>{% trans "Список оборудования" %}</a>
+        <a class="py-2 d-none d-md-inline-block" href="http://127.0.0.1:8000/jspage/">{% trans "О нас" %}</a>
+        <a class="py-2 d-none d-md-inline-block" href="http://127.0.0.1:8000/contacts/">{% trans "Контакты" %}</a>
+        <a class="py-2 d-none d-md-inline-block"
+           href=http://127.0.0.1:8000/login/>{% trans "Логин" %}</a>
+        <a class="py-2 d-none d-md-inline-block"
+           href=http://127.0.0.1:8000/logout/>{% trans "ЛогАут" %}</a>
+    </div>
 </nav>
 {% block description %} {% endblock %}
 
 {% block footer %}
-    
+
 {% endblock %}
 <style>
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: dimgrey;
-  color: lightgrey;
-  text-align: center;
-}
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: dimgrey;
+        color: lightgrey;
+        text-align: center;
+    }
 </style>
 
 <div class="footer">
-    <form method="post" action="https://trsis-labs.azurewebsites.net/change_language/">
-    {% csrf_token %}
-    <select name="language">
-        {% get_available_languages as LANGUAGES %}
-        {% for language in LANGUAGES %}
-        <option value="{{ language.0 }}" {% if language.0 == LANGUAGE_CODE %} selected{% endif %}>
-            {{ language.0|language_name_local }} ({{ language.0 }})
-        </option>
-        {% endfor %}
-    </select>
-    <input type="submit" value="Change language">
-</form>
+    <form method="post" action="http://127.0.0.1:8000/change_language/">
+        {% csrf_token %}
+        <select name="language">
+            {% get_available_languages as LANGUAGES %}
+            {% for language in LANGUAGES %}
+                <option value="{{ language.0 }}" {% if language.0 == LANGUAGE_CODE %} selected{% endif %}>
+                    {{ language.0|language_name_local }} ({{ language.0 }})
+                </option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Change language">
+    </form>
 </div>
 </body>
 </html>
